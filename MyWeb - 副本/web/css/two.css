@@ -1,0 +1,631 @@
+﻿/* 全局样式设置：取消所有元素的默认内外边距和边框 */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* 超链接的默认和访问后的样式，颜色为白色且没有下划线 */
+a:link,a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+/* 超链接在鼠标悬浮时的样式，颜色变为黄色 */
+a:hover{
+    color: yellow;
+}
+
+/* 网页右侧三个超链接容器样式 */
+.toback{
+    position: fixed;            /* 固定定位,一直显示在页面固定位置 */
+    width: 50px;
+    height: 190px;
+    right: 2%;                  /* 距离右边缘2% */
+    z-index: 1002;              /* 层叠顺序 */
+    top: 41%;                   /* 距离顶部41% */
+}
+.toback a{
+    display: block;             /* 转换为块状元素 */
+    color: #999;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;        /* 圆形元素 */
+    background-color: rgb(248, 214, 214);  /* 背景色 */
+    text-align: center;         /* 文本居中 */
+    line-height: 50px;          /* 行高 */
+    margin: 10px;               /* 外边距 */
+    font-size: 13px;            /* 字体大小 */
+    box-shadow: 0 0 0 1px #fff inset;  /* 内阴影 */
+    transition: box-shadow 0.4s ease 0s;  /* 阴影变换效果 */
+}
+.toback a:hover{
+    box-shadow: 0 0 0 30px red inset;     /* 鼠标悬浮时的内阴影 */
+    color: white;
+}
+
+/* 网页头部样式设置 */
+.homeclass{
+    width: 100%;
+    height: 500px;
+    position: relative;  /* 相对定位 */
+}
+.header1{
+    width: 100%;
+    height: 40px;
+    background: #7a0505; /* 背景色 */
+    z-index: 999;        /* 层叠顺序 */
+    position: absolute;  /* 绝对定位 */
+}
+.header1 img{
+    float: left;         /* 向左浮动 */
+    height: 40px;        /* 高度 */
+    margin-left: 50px;   /* 左外边距 */
+}
+.header1 .right{
+    margin-top: 10px;    /* 上外边距 */
+    right: 40px;         /* 右偏移 */
+    float: right;        /* 向右浮动 */
+    margin-right: 40px;  /* 右外边距 */
+    font-family: "微软雅黑";  /* 字体 */
+}
+.header1 .right a{
+    margin-right: 20px;  /* 右外边距 */
+}
+
+/* 导航栏样式设置 */
+.header{
+    width: 100%;
+    height: 90px;
+    background: rgba(0,0,0,0.2); /* 半透明背景色 */
+    z-index: 1000;                 /* 层叠顺序 */
+    position: absolute;           /* 绝对定位 */
+    top: 40px;                    /* 距离顶部40px */
+    border-bottom: 1px solid #fff;/* 底部边框 */
+}
+.nav{
+    float: left;                 /* 向左浮动 */
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0,0,0,0.3);  /* 半透明背景色 */
+}
+.nav>ul{
+    margin-top: 0;
+    margin-left: 210px;            /* 左外边距 */
+    padding-inline-start: 0%;      /* 内侧填充 */
+}
+.nav>ul>li{
+    float: left;                   /* 向左浮动 */
+    width: 178.3px;
+    height: 90px;
+    list-style: none;              /* 去掉列表样式 */
+    text-align: center;
+    margin-left: 0;
+    line-height: 90px;             /* 行高 */
+    font-family: "黑体";           /* 字体 */
+    font-size: 18px;               /* 字体大小 */
+    font-weight: bolder;           /* 加粗 */
+    color: white;
+}
+.nav-child > li {  
+    width: 178.3px;
+    height: 40px;
+    list-style: none;
+    text-align: center;
+    line-height: 40px;             /* 行高 */
+    text-align: center;  
+    background-color: rgba(0,0,0,0.3); /* 半透明背景色 */
+    color: white;
+}
+.nav-child{
+    visibility: hidden;            /* 子菜单初始不可见 */
+    font-family: "微软雅黑";       /* 字体 */
+    font-size: 15px;               /* 字体大小 */
+    font-weight: bold;             /* 加粗 */
+    list-style: none;
+}
+.nav-child>li>a:hover{
+    color: rgba(255, 0, 0, 0.635);  /* 悬停时颜色切换 */
+}
+ul>li:hover ul li{
+    border-style: dotted;     /* 边框样式 */
+    border-color: gainsboro;  /* 边框颜色 */
+    border-width: 0.3px;      /* 边框宽度 */
+    visibility: visible;      /* 可见状态 */
+}
+
+/* 辣山坡美食顶部样式设置 */
+.image{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url(../../imgs/辣山坡美食.jpg);  /* 背景图片 */
+    border-bottom: 1px solid #fff;   /* 底部边框 */
+    background-position: center center;  /* 背景图片居中 */
+    background-repeat: no-repeat;  /* 不重复背景 */
+    background-size: cover;  /* 背景图片填满 */
+    background-color: #464646;   /* 背景色 */
+}
+.image ul{
+    position: absolute;
+    right: 150px;  /* 右偏移 */
+    top: 180px;    /* 顶部偏移 */
+}
+.image ul>li{
+    list-style: none;
+    font-family: "微软雅黑";  /* 字体样式 */
+    font-size: 120px;  /* 字体大小 */
+    color: red;
+    font-weight: bolder;  /* 加粗 */
+    text-shadow: 2px 3px 3px #464646;  /* 文字阴影效果 */
+}
+
+/* 进行轮播图的样式实现，用于制作菜单 */
+.slidershow{
+    width: 100%;
+    height: 1500px;
+    overflow: hidden;  /* 溢出隐藏 */
+    position: relative;
+    background: url(../../imgs/加入我们背景.jpeg);
+}
+.navigation{
+    position: absolute;
+    width: 138px;
+    height: 800px;
+    left: 2%;  /* 左边距 */
+    z-index: 1003;
+    top: 20%;  /* 顶部偏移 */
+}
+.bar{
+    display: block;  /* 块元素 */
+    width: 90px;
+    height: 90px;
+    border: 2px solid rgba(255, 0, 0, 0.772); /* 边框颜色 */
+    border-radius: 100%;  /* 圆形 */
+    margin: 60px 20px;  /* 外边距 */
+    transition: 0.4s;  /* 过渡时间 */
+    text-align: center;  /* 居中对齐 */
+    line-height: 90px;  /* 行高 */
+    font-size: 25px;  /* 字体大小 */
+    font-family: "微软雅黑";  /* 字体 */
+    font-weight: bold;
+    color: #666;
+    background:rgba(236, 169, 169, 0.635);  /* 半透明背景色 */
+}
+input[name="r"]{
+    position: absolute;  /* 绝对定位 */
+    visibility: hidden;  /* 隐藏 */
+}
+.bar:hover{
+    background: red;
+    color: white;
+}
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;  /* 弹性盒子布局 */
+}
+.slide{
+    width: 20%;
+    transition: 0.6s;  /* 过渡时间 */
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+/* 各单选按钮对应的状态 */
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+/* 菜品卡片样式设置 */
+.card{
+    position: relative;
+    width: 80%;
+    height: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 200px;  /* 左外边距 */
+    margin-top: 100px;   /* 上外边距 */
+    justify-content: center;  /* 居中对齐 */
+}
+.card .cards{
+    position: relative;
+    width: 300px;
+    height: 368px;
+    margin-left: 20px;  /* 左外边距 */
+    margin-top: 30px;  /* 上外边距 */
+}
+.card .cards .front,.card .cards .back{
+    width: 300px;
+    height: 368px;
+    position: absolute;
+    backface-visibility: hidden;  /* 背面不可见 */
+    transition: all 1s ease;  /* 所有属性过渡时间 */
+}
+
+/* 锅底部分菜单 */
+.slides .s1 .card{
+    margin-top: 300px;  /* 上外边距 */
+}
+.slides .s1 .card .cards:first-child .front{
+    background:url(../../imgs/锅底/番茄火锅.jpg);
+    background-size: cover;
+    border-radius: 10px;  /* 圆角 */
+}
+.slides .s1 .card .cards:nth-of-type(2) .front{
+    background:url(../../imgs/锅底/麻辣火锅.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s1 .card .cards:nth-of-type(3) .front{
+    background:url(../../imgs/锅底/清油麻辣火锅.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s1 .card .cards:nth-of-type(4) .front{
+    background:url(../../imgs/锅底/三鲜火锅.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s1 .card .cards:nth-of-type(5) .front{
+    background:url(../../imgs/锅底/姬松茸菌汤火锅.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s1 .card .cards:nth-of-type(6) .front{
+    background:url(../../imgs/锅底/岭南黄猪肚鸡火锅.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s1 .card .cards:nth-of-type(7) .front{
+    background:url(../../imgs/锅底/真香锅.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+/* 涮菜部分菜单 */
+.slides .s2 .card .cards:first-child .front{
+    background:url(../../imgs/涮菜/辣山坡脆毛肚.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(2) .front{
+    background:url(../../imgs/涮菜/辣山坡鸭肠.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(3) .front{
+    background:url(../../imgs/涮菜/鲜脆黄喉.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(4) .front{
+    background:url(../../imgs/涮菜/嫩滑牛肉.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(5) .front{
+    background:url(../../imgs/涮菜/大颗虾滑.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(6) .front{
+    background:url(../../imgs/涮菜/娃娃菜.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(7) .front{
+    background:url(../../imgs/涮菜/生菜.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(8) .front{
+    background:url(../../imgs/涮菜/竹笋.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(9) .front{
+    background:url(../../imgs/涮菜/菠菜.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(10) .front{
+    background:url(../../imgs/涮菜/藕片.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(11) .front{
+    background:url(../../imgs/涮菜/水晶粉丝.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s2 .card .cards:nth-of-type(12) .front{
+    background:url(../../imgs/涮菜/十秒腐竹.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+/* 蘸料部分菜单 */
+.slides .s3 .card{
+    margin-top: 300px;
+}
+.slides .s3 .card .cards:first-child .front{
+    background:url(../../imgs/蘸料/锅底百搭.png);
+    background-size: cover;
+    background-position: 60% 0;
+    border-radius: 10px;
+}
+.slides .s3 .card .cards:nth-of-type(2) .front{
+    background:url(../../imgs/蘸料/酸辣开胃.png);
+    background-size: cover;
+    background-position: 60% 0;
+    border-radius: 10px;
+}
+.slides .s3 .card .cards:nth-of-type(3) .front{
+    background:url(../../imgs/蘸料/老北京口味.png);
+    background-size: cover;
+    background-position: 60% 0;
+    border-radius: 10px;
+}
+.slides .s3 .card .cards:nth-of-type(4) .front{
+    background:url(../../imgs/蘸料/海鲜专属.png);
+    background-size: cover;
+    background-position: 60% 0;
+    border-radius: 10px;
+}
+.slides .s3 .card .cards:nth-of-type(5) .front{
+    background:url(../../imgs/蘸料/提鲜必备.png);
+    background-size: cover;
+    background-position: 60% 0;
+    border-radius: 10px;
+}
+.slides .s3 .card .cards:nth-of-type(6) .front{
+    background:url(../../imgs/蘸料/川渝搭档.png);
+    background-size: cover;
+    background-position: 60% 0;
+    border-radius: 10px;
+}
+.slides .s3 .card .cards:nth-of-type(7) .front{
+    background:url(../../imgs/蘸料/川氏口味.png);
+    background-size: cover;
+    background-position: 60% 0;
+    border-radius: 10px;
+}
+.slides .s3 .card .cards:nth-of-type(8) .front{
+    background:url(../../imgs/蘸料/丸滑必备.png);
+    background-size: cover;
+    background-position: 60% 0;
+    border-radius: 10px;
+}
+
+/* 小吃甜品类部分菜单 */
+.slides .s4 .card{
+    margin-top: 300px;
+}
+.slides .s4 .card .cards:first-child .front{
+    background:url(../../imgs/小吃甜品/现炸酥肉.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s4 .card .cards:nth-of-type(2) .front{
+    background:url(../../imgs/小吃甜品/现炸小油条.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s4 .card .cards:nth-of-type(3) .front{
+    background:url(../../imgs/小吃甜品/一口爆浆奶酪鱼条.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s4 .card .cards:nth-of-type(4) .front{
+    background:url(../../imgs/小吃甜品/酥酥嫩嫩炸牛奶.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s4 .card .cards:nth-of-type(5) .front{
+    background:url(../../imgs/小吃甜品/五常米饭.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s4 .card .cards:nth-of-type(6) .front{
+    background:url(../../imgs/小吃甜品/你龙我龙慕斯（白桃味）.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s4 .card .cards:nth-of-type(7) .front{
+    background:url(../../imgs/小吃甜品/你龙我龙慕斯（橙子味）.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+/* 特色饮品类菜单 */
+.slides .s5 .card{
+    margin-top: 500px;
+}
+.slides .s5 .card .cards:first-child .front{
+    background:url(../../imgs/特色饮品/大麦拉格啤酒.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s5 .card .cards:nth-of-type(2) .front{
+    background:url(../../imgs/特色饮品/德式小麦啤酒.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+.slides .s5 .card .cards:nth-of-type(3) .front{
+    background:url(../../imgs/特色饮品/拉个拉格啤酒.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+/* 卡片前面的文本内容 */
+.card .cards .front .text3{
+    position: absolute;          /* 绝对定位 */
+    text-align: center;          /* 文本居中 */
+    line-height: 50px;           /* 行高 */
+    width: 100%;                 /* 宽度为100% */
+    height: 50px;                /* 高度50px */
+    bottom: 0;                   /* 底部对齐 */
+    background-color: rgb(188, 7, 7, 0.6);  /* 半透明背景 */
+}
+.card .cards .front .text3>p{
+    color: white;                /* 文字颜色白色 */
+    font-family: "微软雅黑";     /* 字体 */
+    font-weight: bold;           /* 加粗 */
+    font-size: 20px;             /* 字体大小 */
+}
+
+/* 卡片背面的样式 */
+.card .cards .back{
+    background-color: white;     /* 背景颜色白色 */
+    border: red solid 1px;       /* 边框红色 */
+    border-radius: 10px;         /* 圆角 */
+    transform: rotateY(-180deg); /* 翻转卡面 */
+}
+
+/* 卡片背面标题样式 */
+.card .cards .back .title{
+    color: red;                  /* 文字颜色红色 */
+    font-size: 25px;             /* 字体大小 */
+    text-align: left;            /* 左对齐 */
+    font-weight: bold;           /* 加粗 */
+    margin-left: 20px;           /* 左外边距 */
+    margin-top: 12px;            /* 上外边距 */
+}
+
+/* 卡片背面内容样式 */
+.card .cards .back .text{
+    color: #666;                 /* 文字颜色 */
+    font-size: 14px;             /* 字体大小 */
+    width: 90%;                  /* 宽度 */
+    height: 368px;               /* 高度 */
+    line-height: 1.5;            /* 行高 */
+    text-align: left;            /* 左对齐 */
+    margin-top: 20px;            /* 上外边距 */
+    margin-left: 17px;           /* 左外边距 */
+    text-indent: 2em;            /* 首行缩进 */
+    overflow: auto;              /* 超出内容滚动条 */
+}
+
+/* 卡片翻转效果 */
+.cards:hover .front{
+    transform: rotateY(180deg);  /* 翻转前面 */
+}
+.cards:hover .back{
+    transform: rotateY(0);       /* 显示背面 */
+}
+
+/* 网页底部样式设置 */
+footer{
+    width: 100%;
+    height: 500px;
+    margin-top: 5px;             /* 上外边距 */
+    background-image: url(../../imgs/登录背景.jpg);  /* 背景图片 */
+    border-bottom: 1px solid #fff;  /* 底部边框 */
+    background-position: center center;  /* 背景居中 */
+    background-repeat: no-repeat;        /* 不重复背景 */
+    background-attachment: fixed;       /* 固定背景 */
+    background-size: cover;            /* 背景填满 */
+    background-color: #464646;          /* 背景颜色 */
+}
+
+footer .logo{
+    width: 200px;                /* 宽度 */
+    height: 75px;                /* 高度 */
+    margin: 3px 200px;           /* 外边距 */
+    text-align: center;          /* 文本居中 */
+}
+
+footer .logo ul>li{
+    list-style: none;            /* 无列表样式 */
+    font-family: "微软雅黑";  /* 字体 */
+    font-size: 40px;             /* 字体大小 */
+    color: red;                  /* 文字颜色 */
+    font-weight: bold;           /* 加粗 */
+    line-height: 90px;           /* 行高 */
+}
+
+footer .login{
+    width: 550px;                /* 宽度 */
+    margin: 20px 10px;           /* 外边距 */
+    color: black;                /* 文字颜色 */
+}
+
+footer .login .table{
+    float: left;                 /* 向左浮动 */
+    width: 525px;                /* 宽度 */
+    padding-left: 30px;          /* 内边距 */
+    box-sizing: border-box;      /* 盒模型 */
+}
+
+footer .login .table li{
+    float: left;                 /* 向左浮动 */
+    margin-right: 30px;          /* 右外边距 */
+    list-style: none;            /* 无列表样式 */
+}
+
+/* 表单输入框样式 */
+footer .login .table li input{
+    width: 300px; 
+    height: 32px; 
+    margin: 10px 0 15px 0;
+    border-radius: 5px; 
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: none;
+}
+
+/* 表单标签样式 */
+footer .login .table li span{
+    width: 100px; 
+    display: inline-block;
+    font-weight: bolder;
+}
+
+footer .login .table li:last-child input{                               
+    width: 100px; 
+    height: 40px; 
+    font-size: 18px;
+    margin-top: 20px; 
+    margin-left: 100px; 
+    background: white;
+    border-radius: 20px;
+    color: black;
+}
+
+footer .login .table li:last-child .but{
+    margin-left: 90px;
+}
+
+/* 提交按钮样式 */
+footer .login .table li:last-child .but a{
+    display: block;
+    border: 1px solid #e60012;
+    background-color: red;
+    color: white;
+    padding: 3px 15px;
+    width: 165px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+/* 提交按钮鼠标悬停效果 */
+footer .login .table li:last-child .but a:hover{
+    box-shadow: 2px 2px 2px 2px #666;  /* 阴影效果 */
+}
+

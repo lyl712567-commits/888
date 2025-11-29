@@ -1,0 +1,427 @@
+﻿/* 全局样式：取消所有元素的默认内外边距和边框 */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* 定义超链接的默认、访问后的样式为白色无下划线，悬停时变为黄色 */
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: yellow;
+}
+
+/* 网页右侧三个固定超链接的容器样式 */
+.toback{
+    position: fixed;       /* 固定定位，视口滚动时位置不变 */
+    width: 50px;
+    height: 190px;
+    right: 2%;            /* 距离右边缘2% */
+    z-index: 9;           /* 层叠顺序 */
+    top: 41%;             /* 距离顶部41% */
+}
+
+/* 右侧固定超链接的样式 */
+.toback a{
+    display: block;        /* 转换为块状元素 */
+    color: #999;          /* 链接文字颜色 */
+    width: 50px;
+    height: 50px;  
+    border-radius: 100%;  /* 圆形边角 */
+    background-color: rgb(248, 214, 214);  /* 背景色 */
+    text-align: center;   /* 文本居中对齐 */
+    line-height: 50px;    /* 行高 */
+    margin: 10px;         /* 四周外边距 */
+    font-size: 13px;      /* 字体大小 */
+    box-shadow: 0 0 0 1px #fff inset; /* 内阴影 */
+    transition: box-shadow 0.4s ease 0s; /* 过渡效果 */
+}
+
+/* 固定超链接在悬停时的样式 */
+.toback a:hover{
+    box-shadow: 0 0 0 30px red inset; /* 悬停时内阴影变化 */
+    color:white;                     /* 文字颜色变为白色 */
+}
+
+/* 顶部样式设置 */
+.homeclass{
+    width: 100%;
+    height: 1000px;
+    position: relative;  /* 相对定位，用于内部绝对定位元素的基准 */
+}
+
+/* 窄的顶部条样式 */
+.header1{
+    width: 100%;
+    height: 40px;
+    background: #7a0505; /* 深红色背景 */
+    z-index: 999;        /* 层叠顺序 */
+    position: absolute;  /* 绝对定位 */
+}
+.header1 img{
+    float: left;        /* 左浮动 */
+    height: 40px;       /* 高度 */
+    margin-left: 50px;  /* 左边距 */
+}
+.header1 .right{
+    margin-top: 10px;   /* 上边距 */
+    float: right;       /* 右浮动 */
+    margin-right: 40px; /* 右边距 */
+    font-family: "微软雅黑"; /* 字体 */
+}
+.header1 .right a{
+    margin-right: 20px; /* 右外边距 */
+}
+
+/* 导航栏容器样式 */
+.header{
+    width: 100%;
+    height: 90px;
+    background: rgba(0,0,0,0.2); /* 半透明背景色 */
+    z-index: 1000;               /* 层叠顺序 */
+    position: absolute;          /* 绝对定位 */
+    top: 40px;                   /* 顶部距离 */
+    border-bottom: 1px solid #fff; /* 底部边框 */
+}
+
+/* 导航栏样式 */
+.nav{
+    float: left;         /* 左浮动 */
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0,0,0,0.3); /* 半透明背景 */
+}
+.nav>ul{
+    margin-top: 0;
+    margin-left: 210px; /* 左偏移 */
+    padding-inline-start: 0%; /* 清除内边距 */
+}
+.nav>ul>li{
+    float: left;         /* 左浮动 */
+    width: 178.3px;
+    height: 90px;
+    list-style: none;   /* 无列表样式 */
+    text-align: center; /* 居中对齐 */
+    line-height:90px;   /* 行高 */
+    font-family: "黑体"; /* 字体 */
+    font-size: 18px;    /* 字体大小 */
+    font-weight: bolder; /* 加粗 */
+    color: white;       /* 文字颜色 */
+}
+
+/* 子菜单样式 */
+.nav-child > li {  
+    width: 178.3px;
+    height: 40px;
+    list-style: none;    /* 无列表样式 */
+    text-align: center;
+    line-height: 40px;   /* 行高 */
+    background-color: rgba(0,0,0,0.3); /* 半透明背景 */
+    color: white;        /* 文字颜色 */
+}
+.nav-child{
+    visibility: hidden;             /* 初始隐藏 */
+    font-family: "微软雅黑";      /* 字体 */
+    font-size: 15px;               /* 字体大小 */
+    font-weight: bold;             /* 加粗 */
+    list-style: none;              /* 无列表样式 */
+}
+
+/* 子菜单悬停样式 */
+.nav-child>li>a:hover{
+    color: rgba(255, 0, 0, 0.635); /* 悬停时颜色切换 */
+}
+
+/* 子菜单悬停显示 */
+ul>li:hover ul li{
+    border-style: dotted;          /* 边框样式为虚线 */
+    border-color: gainsboro;      /* 边框颜色 */
+    border-width: 0.3px;          /* 边框宽度 */
+    visibility: visible;         /* 可见 */
+}
+
+/* 视频样式设置 */
+video {
+    width: 100%;  
+    height: 100%;   
+    object-fit: cover;   /* 视频覆盖整个容器 */
+    position: absolute;  
+    top: 0;
+    left: 0;  
+}  
+
+/* 音频样式设置 */
+audio{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* 标题栏样式设置 */
+.headline{
+    position: relative;
+    width: 100%;
+    height: 90px;
+    background: url(../../imgs/背景.jpeg);
+}
+.headline img{
+    width: 100px;
+    height: 80px;
+    margin-top: 5px;
+}
+.headline>ul{
+    margin-top: 0;
+    margin-left: 0;
+    padding-inline-start: 0%;
+}
+.headline>ul .text{
+    float: left;
+    width: 250px;
+    height: 90px;
+    list-style: none;
+    text-align: center;
+    line-height:90px;
+    font-family: "微软雅黑";
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+}
+.headline>ul .img{
+    float: left;
+    width: 40px;
+    height: 90px;
+    list-style: none;
+    margin-left: 190px;
+    line-height:90px;
+}
+
+/* 三个动画盒子样式 */
+.body{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    position: relative;
+    background: url(../../imgs/背景.jpeg); /* 背景图片 */
+}
+.items{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 30px;               /* 外边距 */
+    background:url(../../imgs/6ta69a09.png) no-repeat; /* 背景图片 */
+    background-size: cover;     /* 背景覆盖 */
+    border-radius: 50%;         /* 圆形 */
+    box-shadow: inset 0 0 0 16px rgba(225, 225, 225, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    transition: all 0.4s ease-in-out; /* 过渡效果 */
+}
+
+/* 第二个盒子的背景图片设置 */
+.items:nth-child(2){
+    background:url(../../imgs/涮菜/辣山坡脆毛肚.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* 第三个盒子的背景图片设置 */
+.items:nth-child(3){
+    background:url(../../imgs/加入我们.webp) no-repeat;
+    background-size: cover;
+}
+/* 盒子悬停效果 */
+.items:hover{
+    box-shadow: inset 0 0 0 1px rgba(225, 225, 225, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1); /* 阴影变化 */
+}
+.items:hover .describe{
+    opacity: 1;               /* 完全不透明 */
+    transform: scale(1);      /* 放大到正常大小 */
+}
+.items:hover .describe p{
+    opacity: 1;               /* 完全不透明 */
+}
+
+/* 盒子内描述的样式设置 */
+.describe{
+    opacity: 0;               /* 透明度初始为0 */
+    transform: scale(0);      /* 初始缩放 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(138, 25, 25, 0.8); /* 背景色 */
+    border-radius: 50%;       /* 圆角 */
+    text-align: center;       /* 文本居中 */
+    transition: all 0.4s ease-in-out;
+}
+
+/* 描述标题样式 */
+.describe h3{
+    height: 100px;
+    font-size: 40px;        /* 字体大小 */
+    color: white;           /* 文字颜色 */
+    margin: 0 30px;         /* 外边距 */
+    padding-top: 90px;      /* 内边距 */
+}
+
+/* 描述段落样式 */
+.describe p{
+    opacity: 0;               /* 初始透明度 */
+    font-size: 22px;          /* 字体大小 */
+    color: #fff;              /* 文字颜色 */
+    font-style: italic;       /* 斜体 */
+    margin: 0 30px;           /* 外边距 */
+    padding-top: 10px;        /* 内边距 */
+    border-top: 1px solid rgba(225, 225, 225, .5); /* 上边框 */
+    transition: all 0.4s ease-in-out 0.4s; /* 过渡效果 */
+}
+
+/* 描述内的链接样式 */
+.describe a{
+    display: block;           /* 块元素 */
+    font-size: 40px;          /* 字体大小 */
+    font-family: "微软雅黑"; /* 字体 */
+    font-style: normal;       /* 正常体 */
+}
+/* 实景盒子样式设置 */
+.observe{
+    width: 100%;
+    height: 800px;
+    background-color: #7a0505; /* 背景颜色 */
+    position: relative;
+}
+
+/* 边框样式 */
+.observe .lashanpo{
+    width: 190px;
+    height: 75px;
+    margin-left: 70px;
+}
+
+/* 图片样式 */
+.observe .lashanpo>ul>li>img{
+    width: 181.9px;
+    height: 75px;
+}
+
+/* 列表样式 */
+.observe .lashanpo>ul>li{
+    float: left;
+    list-style: none;    /* 无列表样式 */
+}
+
+/* 图片布局 */
+.observe .imgs{
+    position: absolute;
+    width: 1500px;
+    height: 720.3px;
+    margin-left: 70px; /* 左偏移 */
+}
+.observe .imgs>img{
+    width: 1500px;
+    height: 720.3px;
+}
+
+/* 页脚样式 */
+footer{
+    width: 100%;
+    height: 500px;
+    background-image: url(../../imgs/登录背景.jpg); /* 背景图片 */
+    border-bottom: 1px solid #fff; /* 底部边框 */
+    background-position: center center; /* 背景居中 */
+    background-repeat: no-repeat;  /* 不重复 */
+    background-attachment: fixed;  /* 固定背景 */
+    background-size: cover;        /* 背景填满 */
+    background-color: #464646;     /* 背景颜色 */
+}
+
+footer .logo{
+    width: 200px;
+    height: 75px;
+    margin: 3px 200px;   /* 外边距 */
+    text-align: center;  /* 文本居中 */
+}
+
+footer .logo ul>li{
+    list-style: none;                /* 无列表样式 */
+    font-family: "微软雅黑"; /* 字体 */
+    font-size: 40px;                 /* 字体大小 */
+    color: red;                      /* 文字颜色 */
+    font-weight: bold;               /* 加粗 */
+    line-height: 90px;               /* 行高 */
+}
+
+/* 登陆样式 */
+footer .login{
+    width: 550px;
+    margin: 20px 10px;  /* 外边距 */
+    color: black;       /* 文字颜色 */
+}
+
+/* 表格样式 */
+footer .login .table{
+    float: left;
+    width: 525px;              /* 宽度 */
+    padding-left: 30px;        /* 内边距 */
+    box-sizing: border-box;    /* 盒模型 */
+}
+
+/* 表格列表项样式 */
+footer .login .table li{
+    float: left;
+    margin-right: 30px; /* 右外边距 */
+    list-style: none;   /* 无列表样式 */
+}
+
+/* 表单输入框样式 */
+footer .login .table li input{
+    width: 300px;
+    height: 32px;
+    margin: 10px 0 15px 0;    /* 外边距 */
+    border-radius: 5px; 
+    padding-left: 10px;       /* 内边距 */
+    box-sizing: border-box;
+    border: none;             /* 无边框 */
+}
+
+/* 表单标签样式 */
+footer .login .table li span{
+    width: 100px; 
+    display: inline-block;
+    font-weight: bolder;      /* 加粗 */
+}
+
+/* 提交按钮样式 */
+footer .login .table li:last-child input{                               
+    width: 100px;
+    height: 40px;
+    font-size: 18px;          /* 字体大小 */
+    margin-top: 20px;         /* 上外边距 */
+    margin-left: 100px;       /* 左外边距 */
+    background: white;        /* 背景颜色 */
+    border-radius: 20px;      /* 圆角 */
+    color: black;             /* 文字颜色 */
+}
+
+footer .login .table li:last-child .but{
+    margin-left: 90px;       /* 左外边距 */
+}
+
+/* 提交按钮链接样式 */
+footer .login .table li:last-child .but a{
+    display: block;
+    border: 1px solid #e60012;  /* 边框颜色 */
+    background-color: red;      /* 背景颜色 */
+    color: white;               /* 文字颜色 */
+    padding: 3px 15px;          /* 内边距 */
+    width: 165px;               /* 宽度 */
+    font-size: 16px;            /* 字体大小 */
+    text-align: center;         /* 文本居中 */
+    border-radius: 40px;       /* 圆角 */
+}
+
+/* 提交按钮悬停效果 */
+footer .login .table li:last-child .but a:hover{
+    box-shadow: 2px 2px 2px 2px #666; /* 阴影效果 */
+}
+

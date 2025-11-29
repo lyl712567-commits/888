@@ -1,0 +1,107 @@
+﻿/* 全局样式：清除所有元素的默认内外边距 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置 body 背景图片及属性 */
+body{
+    background: url(../../imgs/风格图.jpg); /* 背景图片路径 */
+    background-size: cover;              /* 背景图片覆盖整个容器 */
+    background-position: 0 40%;          /* 背景图片定位 */
+}
+
+/* 主容器样式 */
+.myinformation{
+    position: relative;                          /* 相对定位，方便内部绝对定位元素 */
+    border-radius: 20px;                         /* 设置圆角 */
+    box-shadow: 5px 5px 5px 5px #666;            /* 阴影效果 */
+    width: 500px;
+    height: 600px;
+    background-color: rgba(209, 64, 64, 0.9);    /* 背景颜色及透明度 */
+    margin: 150px auto;                          /* 上外边距150px，水平居中 */
+}
+
+/* 顶部图片样式 */
+.topimg{
+    position: absolute; /* 绝对定位 */
+    width: 400px;
+    height: 160px;
+    margin: 30px 100px; /* 上外边距30px，左右外边距100px */
+}
+
+/* 主容器内的无序列表样式 */
+.myinformation ul{
+    list-style: none;    /* 无列表样式 */
+    margin-top: 60px;    /* 上外边距60px */
+}
+
+/* 左侧内容区域样式 */
+.myinformation .left{
+    position: absolute; /* 绝对定位 */
+    width: 400px;
+    height: 400px;
+    margin: 160px 48px; /* 上外边距160px，左右外边距48px */
+    text-align: center; /* 文本居中对齐 */
+}
+
+/* 右侧内容区域样式 */
+.myinformation .right{
+    position: absolute; /* 绝对定位 */
+    width: 400px;
+    height: 400px;
+    margin: 160px 90px; /* 上外边距160px，左右外边距90px */
+    text-align: center; /* 文本居中对齐 */
+}
+
+/* 左侧列表项的样式 */
+.myinformation .left>ul>li{
+    display: block;            /* 块元素 */
+    width: 400px;
+    height: 70px;
+    text-align: center;         /* 居中对齐 */
+    line-height: 70px;          /* 行高 */
+    font-size: 30px;            /* 字体大小 */
+    font-weight: bold;          /* 加粗字体 */
+    font-family: "微软雅黑";    /* 字体 */
+}
+
+/* 右侧列表项的样式 */
+.myinformation .right>ul>li{
+    display: block;            /* 块元素 */
+    width: 400px;
+    height: 70px;
+    text-align: center;         /* 居中对齐 */
+    line-height: 70px;          /* 行高 */
+    font-size: larger;          /* 较大的字体 */
+    font-family: "微软雅黑";    /* 字体 */
+}
+
+/* 右侧固定返回首页入口 */
+.toback{
+    position: fixed;
+    width: 50px;
+    height: 190px;
+    right: 2%;
+    z-index: 9;
+    top: 41%;
+}
+.toback a{
+    display: block;
+    color: #999;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: rgb(248, 214, 214);
+    text-align: center;
+    line-height: 50px;
+    margin: 10px;
+    font-size: 13px;
+    box-shadow: 0 0 0 1px #fff inset;
+    transition: box-shadow 0.4s ease 0s;
+}
+.toback a:hover{
+    box-shadow: 0 0 0 30px red inset;
+    color:white;
+}
+
